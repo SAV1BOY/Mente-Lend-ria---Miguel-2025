@@ -1,10 +1,16 @@
 # 🧠 Mente Lendária - Miguel 2025
 
-Repositório contendo todas as notas e anotações do **Segundo Cérebro do Alan** extraídas de [mentelendaria.com](https://mentelendaria.com/).
+Repositório para backup e organização de todas as notas e anotações do **Segundo Cérebro do Alan** do site [mentelendaria.com](https://mentelendaria.com/).
 
 ## 📚 Sobre
 
-Este repositório foi criado para preservar e organizar o conteúdo educacional do site Mente Lendária, facilitando o acesso offline e a pesquisa de informações.
+Este repositório foi criado para preservar e organizar o conteúdo educacional do site Mente Lendária (Obsidian Publish), facilitando o acesso offline e a pesquisa de informações.
+
+## ⚠️ Status Atual
+
+**🚧 Estrutura criada - Aguardando extração de notas**
+
+O site usa Obsidian Publish com proteção anti-bot, impedindo extração automatizada via servidor. As notas precisam ser extraídas manualmente ou via script local. Veja `COMO_EXTRAIR.md` para instruções completas.
 
 ## 📁 Estrutura
 
@@ -59,25 +65,42 @@ Use a busca do GitHub (`Ctrl/Cmd + K`) ou procure manualmente na pasta `notas/`.
 
 ## 🛠️ Scripts Disponíveis
 
-### `simple_scraper.py`
-Script Python para extração automatizada de notas (quando possível).
-
+### `scripts/local_scraper_selenium.py` ⭐ RECOMENDADO
+Script para rodar **no seu computador local** (com interface gráfica):
 ```bash
-python3 simple_scraper.py
+pip install selenium webdriver-manager
+python3 scripts/local_scraper_selenium.py
 ```
 
-### `obsidian_scraper.py`
-Script mais robusto usando Playwright para sites com JavaScript.
-
+### `scripts/obsidian_api_scraper.py`
+Tenta usar a API do Obsidian Publish (atualmente bloqueada):
 ```bash
-python3 obsidian_scraper.py
+python3 scripts/obsidian_api_scraper.py
+```
+
+### `scripts/create_index.py`
+Cria índice de todas as notas importadas:
+```bash
+python3 scripts/create_index.py
 ```
 
 ## 📊 Estatísticas
 
-- **Total de Notas**: Em atualização
-- **Data da Extração**: 2025-11-06
-- **Última Atualização**: 2025-11-06
+- **Total de Notas Confirmadas**: ~22 (visíveis na navegação)
+- **Total Estimado**: 100-200+ notas
+- **Data de Setup**: 2025-11-06
+- **Status**: Aguardando extração manual/local
+
+## 🚀 Como Extrair as Notas
+
+**Leia os guias completos:**
+1. **`COMO_EXTRAIR.md`** - Guia passo a passo detalhado
+2. **`LISTA_COMPLETA_NOTAS.md`** - Lista de todas as páginas conhecidas
+3. **`scripts/manual_import_guide.md`** - Guia de importação manual
+
+**Método mais rápido:**
+- Use a extensão **MarkDownload** (veja `COMO_EXTRAIR.md`)
+- OU rode `local_scraper_selenium.py` no seu computador
 
 ---
 
